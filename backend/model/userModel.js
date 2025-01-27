@@ -20,25 +20,28 @@ const userSchema = new mongoose.Schema({
     minLength: [8, "name is should have more than 8 character"],
     select: false,
   },
-  isVerifiedEmal: {
+  isVerifiedEmail: {
     type: Boolean,
     require: [true, "please verify your email "],
   },
   avtar: {
     public_id: {
       type: String,
-      required: true,
+      
     },
     url: {
       type: String,
-      required: true,
+      
     },
   },
   role: {
     type: String,
+    enum:["user","admin"],
     default: "user",
   },
-  resetPasswordToken: String,
-  resetPasswordExpire: Date,
+createdAt:{
+type:Date,
+default:Date.now
+}
 });
 export const User = mongoose.model("User", userSchema);

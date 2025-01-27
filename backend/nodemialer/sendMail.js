@@ -4,7 +4,7 @@ const transpoterInfo = {
   port: 587,
   secure: false,
   auth: {
-    user: "apsanneupane@345@gmail.com",
+    user: "apsanneupane345@gmail.com",
     pass: "urtn jiwf idrv fzgq",
   },
 };
